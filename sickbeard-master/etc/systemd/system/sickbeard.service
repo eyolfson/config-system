@@ -1,0 +1,11 @@
+[Unit]
+Description=SickBeard
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/sickbeard/SickBeard.py --quiet --datadir /home/jon/.sickbeard
+User=jon
+
+[Install]
+WantedBy=multi-user.target
